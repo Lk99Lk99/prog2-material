@@ -40,8 +40,14 @@ public class Element {
     }
 
     /// Liefert die Länge der Liste.
-    public int size() {
+       public int size() {
         // TODO
-        return 0;
+        int counter = 0;
+        Element current = this.next;
+        while(current != this){
+            counter ++;
+            current = current.next;
+        }
+        return counter;
     }
 }

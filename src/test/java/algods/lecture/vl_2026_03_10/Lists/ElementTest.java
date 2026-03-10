@@ -49,4 +49,14 @@ public class ElementTest {
         assertEquals(42, anchor.prev.prev.prev.data);
         assertEquals(anchor, anchor.prev.prev.prev.prev);
     }
+
+    @Test
+    public void testList_size() {
+        Element anchor = new Element();
+        anchor.add(42);
+        anchor.add(23);
+        anchor.add(38);
+
+        assertEquals(3, anchor.size());
+    }
 }
