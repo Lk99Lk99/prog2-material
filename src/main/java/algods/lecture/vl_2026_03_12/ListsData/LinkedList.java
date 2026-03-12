@@ -1,4 +1,4 @@
-package algods.lecture.vl_2026_03_12.Lists;
+package algods.lecture.vl_2026_03_12.ListsData;
 
 public class LinkedList implements List {
     Element anchor;
@@ -25,48 +25,37 @@ public class LinkedList implements List {
     }
 
     /// Hängt einen neuen Wert am Ende der Liste an.
-    public void add(int data) {
+    public void add(Data data) {
         this.anchor.insertBefore(data);
         this.size++;
     }
 
     /// Fügt ein neues Element mit dem gegebenen Wert an der gegeben Position in die
     /// Liste ein.
-    public void insert(int pos, int data) {
+    public void insert(int pos, Data data) {
         this.get(pos).insertBefore(data);
         this.size++;
     }
 
     /// Entfernt das letzte Element aus der Liste.
     public void remove_last() {
-<<<<<<< HEAD
-        // TODO
-        this.anchor.removeBefore();
-        this.size--;
-=======
         this.remove(this.size() - 1);
->>>>>>> d2029cadd30c09ae30ad5d6d664794f8ac5c933d
     }
 
     /// Entfernt das Element an der gegebene Position aus der Liste.
     public void remove(int pos) {
-<<<<<<< HEAD
-        // TODO
-        pos++;
-        Element current = this.anchor.next;
-
-        while (pos>0) {
-            current = current.next;
-            pos--;
-        }
-        current.removeBefore();
-=======
         this.get(pos + 1).removeBefore();
->>>>>>> d2029cadd30c09ae30ad5d6d664794f8ac5c933d
         this.size--;
     }
 
+    /// Liefert die Länge der Liste.
     public int size() {
         return this.size;
+    }
+
+    /// Liefert die Uhrzeit, zu der die Temperatur am höchsten ist.
+    public int getMaxTempTime() {
+        // TODO
+        return 0;
     }
 }

@@ -22,7 +22,7 @@ public class LinkedListTest {
     }
 
     @Test
-    void TestLinkedList_insertBefore() {
+    void TestLinkedList_insert() {
         LinkedList list = new LinkedList();
 
         list.add(42); // 0
