@@ -30,13 +30,14 @@ public class LinkedList {
     /// Entfernt das letzte Element aus der Liste.
     public void remove_last() {
         // TODO
-        anchor.removeBefore();
+        this.anchor.removeBefore();
         this.size--;
     }
 
     /// Entfernt das Element an der gegebene Position aus der Liste.
     public void remove(int pos) {
         // TODO
+        pos++;
         Element current = this.anchor.next;
 
         while (pos>0) {
