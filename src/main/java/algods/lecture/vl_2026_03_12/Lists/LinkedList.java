@@ -39,30 +39,12 @@ public class LinkedList implements List {
 
     /// Entfernt das letzte Element aus der Liste.
     public void remove_last() {
-<<<<<<< HEAD
-        // TODO
-        this.anchor.removeBefore();
-        this.size--;
-=======
         this.remove(this.size() - 1);
->>>>>>> d2029cadd30c09ae30ad5d6d664794f8ac5c933d
     }
 
     /// Entfernt das Element an der gegebene Position aus der Liste.
     public void remove(int pos) {
-<<<<<<< HEAD
-        // TODO
-        pos++;
-        Element current = this.anchor.next;
-
-        while (pos>0) {
-            current = current.next;
-            pos--;
-        }
-        current.removeBefore();
-=======
         this.get(pos + 1).removeBefore();
->>>>>>> d2029cadd30c09ae30ad5d6d664794f8ac5c933d
         this.size--;
     }
 
